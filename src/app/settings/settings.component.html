@@ -1,0 +1,17 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+    <p style="font-size: 25pt; margin-left: 70px;"><u> Expenses </u></p>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="start center"><p style="font-weight: bold; font-size:20px;">Total Budget:</p> &nbsp;&nbsp;
+    <select [ngModel]="item" style="width: 190px; padding:7px;">
+        <option *ngFor="let item of items" [(ngValue)]="item">{{item.name}}</option>
+    </select> &nbsp;&nbsp;
+    <button mat-raised-button style="color: rgb(76, 114, 240)"  (click)="additems(item)">Add
+    </button>
+</div><br />
+<div fxLayout="row" fxLayoutAlign="start center"><p style="font-weight: bold; font-size:20px;">Categories:</p>&nbsp;&nbsp;
+    <input type="text" placeholder="Enter Total Budget" style="padding:7px;margin-left: 15px;" [(ngModel)]="budget">&nbsp;&nbsp;
+    <button mat-raised-button style="color: rgb(76, 114, 240)" type="button"
+        (click)="updatetotalbudget(budget)">Update
+    </button>
+</div>
